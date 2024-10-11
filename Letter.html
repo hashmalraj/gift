@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>I love you😘</title>
+<!--<link rel="stylesheet" href="letter.css">-->
+<style>
+body {
+background: maroon;
+}
+
+.container{
+	position: relative;
+}
+
+.envelope{
+	height: 500px;
+	width: 350px;
+	background: #d1d8b5;
+	position: absolute;
+	top: 20px;
+	z-index: 2;
+	border-radius: 10px;
+}
+
+.envelope>.address{
+	font-size: 20px;
+	font-family: 'American Typewriter';
+	position: absolute;
+	top: 30px;
+	left: 20px;
+}
+
+.envelope>.address>.stamp{
+	width: 80px;
+	height: 40px;
+
+}
+
+.envtop{
+	width: 0;
+	height: 0;
+	border-top: 250px solid transparent;
+	border-bottom: 250px solid transparent ;
+	border-left: 200px solid #b7bca6;
+	border-radius: 10px;
+	position: absolute;
+	top: 20px;
+	left: 150px;
+	rotate: 180deg;
+	z-index: 3;
+}
+
+.shadow{
+	width: 0;
+	height: 0;
+	border-top: 250px solid transparent;
+	border-bottom: 250px solid transparent ;
+	border-right: 200px solid #d1d8b5;	
+	border-radius: 10px;
+	position: absolute;
+	top: 20px;
+	left: 150px;
+	z-index: 2;
+}
+
+.letter{
+	width: 310px;
+	height: 460px;
+	background: beige;
+	position: absolute;
+	z-index: 0;
+	top: 25px;
+	left: 10px;
+	border-radius: 20px;
+	padding: 10px;
+
+}
+
+.text{
+	font-family: 'American Typewriter' ;
+	font-style: italic;
+	font-size: 20px;
+}
+
+.heart{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 140;
+	top: 235;
+	z-index: 4;
+}
+
+.flap>.heart{
+	transform: rotate(90deg);
+	transition-duration: 0.5s;
+}
+
+.flap>.envtop{
+	transform: rotate(180deg);
+	translate: 200px;
+	transition-delay: 0.6s;
+	z-index: 0;
+}
+.flap>.letter{
+	z-index: 1;
+	transform: translate(350px);
+	transition-duration: 2s;
+	transition-delay: 1s;
+}
+</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="envelope">
+			<div class="address">
+				To : Anamika <br><br>With Lots of Love, <br>
+				<img src="https://1000logos.net/wp-content/uploads/2021/10/Batman-Logo.png" class="stamp">
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				<small>October 11, 2024</small>
+			</div>
+		</div>
+		<div class="envtop"></div>
+		<div class="shadow"></div>
+		<div class="letter">
+			<div class="text">
+				<p><b>Dear Anamika,</b><br><br>I love you so much. You're the best girlfriend in the world and you're literally the best thing that ever happened to me. Yes we do have our fights, but there's no one else I wanna have our little fights with😛. <br><br> I'm the happiest person in the whole world when I'm with you, irl and also while texting. YOU make me the happiest. Nothing will ever change my love for you. I am so grateful to have you in my life babe. <br><br> Your husband, <br> Batman </p>
+			</div>
+		</div>
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/640px-Heart_coraz%C3%B3n.svg.png" class="heart" onclick="show()">
+	</div>
+
+<script language="JavaScript">
+		const envelope = document.querySelector('.container');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+	</script>
+</body>
+
+</html>
